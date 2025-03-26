@@ -99,6 +99,7 @@ body {
   width: 50px;
   height: 1px;
   background-color: #ba954f;
+  transition-duration: 0.3s;
 } 
 
 .button__bordered_gray:hover::before {
@@ -119,6 +120,7 @@ body {
   width: 50px;
   height: 1px;
   background-color: #ffffff;
+  transition-duration: 0.3s;
 } 
 
 .button__bordered_orange:hover::before {
