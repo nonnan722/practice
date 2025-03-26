@@ -1,0 +1,717 @@
+/* 共通 ----------------------------------------------------------- */
+* {
+  box-sizing: border-box;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
+  letter-spacing: 3px;
+  list-style: none;
+}
+
+body {
+  overflow: scroll;
+}
+
+/* section layout */
+.section__ly {
+  width: 80%;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.section__ly_no-margin{
+  width: 100%;
+}
+
+.section__bg{
+  padding: 80px 60px 80px 60px;
+}
+
+/* section background */
+.section__bg_black{
+  background-color: #232323;
+}
+
+.section__bg_gray{
+  background-color: #47484C;
+}
+
+/* font-white */
+.section__text_white{
+  color: #ffffff;
+}
+
+/* section title */
+.section__title-ja {
+  font-size: 2em;
+  letter-spacing: 5px;
+  padding: 20px;
+}
+
+.section__title-en {
+  color: #ba954f;
+}
+
+.text_size-s {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+}
+
+.text_orange {
+  color: #ba954f;
+}
+
+/* button */
+.button {
+  margin: 80px auto;
+}
+
+.button__bordered {
+  padding: 15px 70px 15px 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.button__bordered_gray{
+  border: solid 1px #afafb0;
+  border-left: solid 5px #afafb0;
+}
+
+.button__box{
+  position: relative;
+  width: 350px;
+  transition-duration: 0.3s;
+  overflow: hidden;
+}
+
+.button__box:hover{
+  opacity: 0.7;
+}
+
+.button__bordered_gray::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: #ba954f;
+} 
+
+.button__bordered_gray:hover::before {
+  transform: translateX(50px);
+}
+
+.button__bordered_orange{
+  background-color: #ba954f;
+  border: solid 1px #ba954f;
+}
+
+.button__bordered_orange::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: #ffffff;
+} 
+
+.button__bordered_orange:hover::before {
+  transform: translateX(50px);
+}
+
+.button__inner_black {
+  color: #282828;
+}
+
+.button__inner_gray {
+  color: #282828;
+}
+
+.position_left{
+  margin-left: 0;
+}
+
+
+/* ヘッダー -----------------------------------------------------------  */
+.header {
+  background-color: #282828;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  gap: 100px;
+}
+
+.menu__inner {
+  display: flex;
+  gap: 30px;
+}
+
+.menu__inner_white {
+  color: #ffffff;
+}
+
+.button__inner {
+  padding: 10px 50px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  font-size: 0.9em;
+  display: none;
+}
+
+.menu__link{
+  text-decoration: none;
+}
+
+.menu__link:hover{
+  text-decoration: none;
+}
+
+.menu__link:active{
+  text-decoration: none;
+}
+
+.button__toggle_mark{
+  font-size: 0.5em;
+}
+
+/* メインビジュアル ----------------------------------------------------------- */
+.section__mv{
+  margin: 0;
+  width: 100%;
+}
+.top {
+  display: flex;
+  justify-content: center;
+}
+
+.top__mv {
+  position: relative;
+  z-index: 2;
+}
+.top__mv_w100 {
+  width: 100%;
+}
+
+.button__shippingfree {
+  position: absolute;
+  z-index: 20;
+  right: 5vw;
+  bottom: 25%;
+}
+
+.button__shippingfree__w100 {
+  height: 100%;
+}
+
+/* 新着情報 -----------------------------------------------------------*/
+.section-news__menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.section-news__menu__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  text-align: left;
+  width: 23%;
+  gap: 10px;
+}
+
+.text_line {
+  position: relative;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.text_line::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  width: 10px;
+  height: 2px;
+  background-color: #ba954f;
+  left: 0;
+}
+
+/* 商品カテゴリ----------------------------------------------------------- */
+.section-product__category {
+  margin: 50px auto;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px 50px;
+}
+
+.section-product__category__inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 20%;
+}
+
+.section-product__category__inner__img {
+  width: 50%;
+}
+
+.section-product__price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button__cotainer {
+  width: 18%;
+}
+.button__container__price {
+  border: solid 1.5px #ba954f;
+  padding: 30px 20px;
+}
+
+/* 新商品----------------------------------------------------------- */
+.section-new-product__list{
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.section-new-product__list__inner{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.section-new-product__list__inner__img{
+  width: 100%;
+}
+
+/* SNSアカウント----------------------------------------------------------- */
+.section-sns__box{
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  gap: 30px;
+  width: 80%;
+}
+
+.section-sns__link{
+  width: 100%;
+}
+
+/* お土産商品----------------------------------------------------------- */
+.section-souvenir-items{
+  margin: 0 auto;
+}
+.section-souvenir-items__list{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  gap: 50px;
+}
+
+.section-souvenir-items__list__inner{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 20px;
+}
+
+.section-souvenir-items__img{
+  width: 100%;
+}
+
+/* 人気お土産ランキング----------------------------------------------------------- */
+
+/* layout */
+.section-ranking__box{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.section-ranking__item{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  gap: 50px;
+}
+
+.section-ranking__item__img{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 350px;
+}
+.section-ranking__img{
+  width: 100%;
+}
+
+.section-ranking__item_price{
+  text-align: right;
+}
+/* font */
+.section-ranking__text_size_l{
+  font-size: 1.3em;
+}
+
+.section-ranking__text_size_s{
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  line-height: 2em;
+}
+
+/* bottom border */
+.section-ranking__item_description{
+  padding-bottom: 20px;
+  border-bottom: solid 0.5px #DADAD9;
+  height: 250px;
+}
+
+/* おすすめ商品----------------------------------------------------------- */
+.section-recommend_autoplay{
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.section-recommend_autoplay_space{
+  margin: 20px;
+}
+.section-recommend__item{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 15px;
+}
+
+.section-recommend__img{
+  width: 100%;
+}
+
+.section-recommend__text{
+  font-size: 0.9em;
+}
+
+/* スタッフ厳選！至極のおすすめ商品 -----------------------------------------------------------*/
+
+/* layout */
+.recommend__wrapper_flex_column{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+}
+
+.recommend__wrapper_flex_row{
+  display: flex;
+  gap: 50px;
+  text-align: left;
+}
+
+.recommend__item__description{
+  display: flex;
+  gap: 50px;
+}
+
+.recommend__item__rice{
+  margin-top: -300px;
+}
+
+.recommend__item__text{
+  margin-top: 50px;
+}
+
+/* font */
+.recommend__subtitle{
+  line-height: 2em;
+  margin-top: 20px;
+}
+
+.recommend__item__title-sub{
+  font-weight: bold;
+}
+.recommend__item__title{
+  font-size: 2em;
+  margin: 20px auto 50px auto ;
+  letter-spacing: 5px;
+}
+
+.recommend__item__sentence{
+  line-height: 3em;
+}
+
+/* 特別な日の贈り物に ----------------------------------------------------------- */
+.section-scene_flex{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.section-scene__wrapper{
+  text-align: center;
+}
+
+.flex_down{
+  margin-top: 150px;
+}
+
+.section-scene__img{
+  width: 100%;
+}
+
+.section-scene__img__title{
+  margin: 20px;
+}
+.text_vertical{
+  writing-mode: vertical-rl;
+  text-align: left;
+  margin: auto;
+}
+
+.section-scene__description{
+  line-height: 2em;
+}
+/* 一井おみやげセンター----------------------------------------------------------- */
+
+/* layout */
+.section-store__container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-store__text_title_ly{
+  position: absolute;
+  top: 5%;
+}
+
+.section-store__container-bottom_ly{
+  margin: -350px auto 50px auto;
+}
+
+/* top side */
+.section-store__container-top{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 500px;
+  background-color: #47484C;
+}
+
+.section-store__text_title{
+  letter-spacing: 10px;
+  opacity: 0.3;
+}
+
+/* bottom side */
+.section-store__container-bottom{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  width: 80%;
+}
+
+.section-store__mv__img{
+  width: 100%;
+}
+
+.section-store__description{
+  margin: auto;
+  width: 70%;
+}
+
+.section-store-info{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+}
+
+.section-store-info__item{
+  text-align: left;
+}
+
+.section-store-info__textbox{
+  width: 50%;
+}
+
+.section-store-info__img{
+  width: 80%;
+}
+
+/* font-bottom */
+.section-store__text_size_l{
+  font-size: 5em;
+}
+
+.section-store__text_size_m{
+  font-size: 1.3em;
+}
+
+.section-store__text_size_s{
+  font-size: 0.8em;
+}
+.section-store__description__text{
+  letter-spacing: 3px;
+}
+
+.section-store__text_line-height{
+  line-height: 3em;
+}
+
+.section-store-info__title{
+  border-bottom: solid 0.5px #DADAD9;
+}
+
+.list_dot_show::before{
+  content: "・";
+}
+
+/* フッターメインビジュアル -----------------------------------------------------------*/
+
+.section-footer-mv__box{
+  position: relative;
+}
+
+.section-footer-mv__img{
+  width: 100%;
+}
+
+.section-footer__textbox{
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  text-align: left;
+}
+
+.section-footer__text{
+  font-size: 2em;
+  line-height: 2em;
+  letter-spacing: 5px;
+  text-shadow: 1px 1px 10px #282828;
+}
+/* フッター -----------------------------------------------------------*/
+
+/* 連絡先情報 & フッターナビ */
+.footer-info{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 70%;
+}
+
+.footer-info__box{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.footer__logo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+
+.footer__logo__box{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.footer__sns{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer__address{
+  width: 100%;
+}
+
+.footer__sns__img{
+  width: 20px;
+}
+
+/* font */
+.footer__text_bold{
+  font-weight: bold;
+}
+
+.footer_mg_bottom{
+  margin-bottom: 1em;
+}
+
+.footer__store-name{
+  margin-bottom: 3em;
+}
+
+.footer__text{
+  font-size: 0.8em;
+}
+
+.footer__text_line-height{
+  line-height: 2em;
+}
+
+/* 中央線 */
+.footer-border__box{
+  margin: 50px auto;
+  width: 90%;
+}
+
+.footer-border__line{
+  border: 1px solid #DADAD9;
+}
+
+/* Copyright & ポリシー */
+.footer__regulation{
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+
+.footer__policy__ul{
+  display: flex;
+  gap: 30px;
+}
+
+.footer__copyright__text_en{
+  letter-spacing: 0;
+}
+
+.footer__policy__item{
+  letter-spacing: 0;
+}
+
+.footer__policy__item_border{
+  border-left: 2px solid #DADAD9;
+  padding-left: 20px;
+  height: 100%;
+}
