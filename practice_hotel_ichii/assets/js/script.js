@@ -1,6 +1,7 @@
 $(function () {
   $(".button__toggle").click(function () {
-    $(".button__inner").show;
+    $(".menu__box__product-category").slideToggle(300);
+    $(this).toggleClass('is-active');
   });
 
   $('.section-recommend_autoplay').slick({
