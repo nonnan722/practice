@@ -1,0 +1,150 @@
+:root {
+  /* 背景色 */
+  --bg-primary: #504333;
+  --bg-primary-light: #F7F4F0;
+  --bg-white: #FFFFFF;
+
+  /* ボーダー色 */
+  --border-white: #FFFFFF;
+
+  /* フォント色 */
+  --font-primary: #504333;
+  --font-black: #333333;
+  --font-white: #FFFFFF;
+  --font-base: #5D5D5D;
+
+  /* コンテナ幅 */
+  --width-content-s: 920px;
+  --width-content: 1080px;
+
+  /* フォント */
+  --font-family-base: "Noto Serif JP", serif;
+  --font-family-en: "Montserrat", sans-serif;
+}
+
+/* 共通 */
+body {
+  font-family: var(--font-family-base);
+}
+
+.set-center{
+  text-align: center;
+}
+
+.font_white{
+  color: var(--font-white);
+}
+
+.m-t40{
+  margin-top: 40px;
+}
+/* スマホ向けレイアウト */
+@media screen and (max-width:768px){
+  /* 共通 */
+  .section__inner{
+    min-width: 375px;
+    margin-inline: auto;
+  }
+  .font_lg_sp{
+    font-family: var(--font-family-en);
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.4em;
+  }
+  .font_md_sp{
+    font-size: 18px;
+    line-height: 1.6em;
+    letter-spacing: 0.08em;
+  }
+  .font_sm_sp{
+    font-size: 12px;
+    line-height: 2em;
+    letter-spacing: 0.08em;
+  }
+  .font_description_sp{
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: 0.08em;
+  }
+  .btn{
+    font-family: var(--font-family-en);
+    font-size: 16px;
+    line-height: 1em;
+    letter-spacing: 0.08em;
+    color: var(--font-white);
+    background-color: var(--bg-primary);
+    padding: 17px 79px;
+    border-radius: 1000px;
+  }
+
+  /* 全体レイアウト */
+  .section__inner{
+    margin-top: 64px;
+  }
+
+  .section__inner_padding{
+    padding: 64px 18px;
+  }
+
+  .mg_inline{
+    margin-inline: auto; /* .section__innerで一括設定したいのになぜ効かない */
+  }
+  .w-70p{
+    width: 70%;
+  }
+
+  /* ヘッダー */
+  .img__logo{
+    max-width: 160px;
+  }
+
+  /* コンセプト */
+  .bg-img__concept{
+    width: 300px;
+    height: 711px;
+    background-image: url('/assets/img/sp/bg-top-concep-sp.jpg'); /* 画像のパスを指定 */
+    background-size: cover; /* 要素全体を覆うように画像を拡大縮小 */
+    background-position: center; /* 画像を中央に配置 */
+  }
+
+  .text_concept_mg{
+    margin: 12px auto 24px auto;
+  }
+
+  /* プロダクト */
+  .font_primary{
+    color: var(--font-primary);
+  }
+
+  /* .product__container__inner_flex{
+    display: flex;
+
+  } */
+
+}
+
+/* PC向けレイアウト */
+@media screen and (min-width:769px){
+  /* 共通 */
+  .font_lg_pc{
+    font-size: 32px;
+    line-height: 150%;
+    letter-spacing: 40%;
+  }
+  .font_md_sp{
+    font-size:20;
+    line-height: 160%;
+    letter-spacing: 8%;
+  }
+  .font_sm_sp{
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: 8%;
+  }
+  .font_description_sp{
+    font-size: 16px;
+    line-height: 200%;
+    letter-spacing: 8%;
+  }
+
+}
